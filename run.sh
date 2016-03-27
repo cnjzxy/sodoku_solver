@@ -3,7 +3,7 @@
 if g++ read_input.cpp -o rd && g++ print_result.cpp -o prnt; then
 	if [ $# -eq 0 ]; then
 		echo "########################"
-		echo "Please input the sodoku."
+		echo "Please input the sudoku."
 		echo "For example:"
 		echo "000000047"
 		echo "003001800"

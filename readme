@@ -1,28 +1,33 @@
-[gcc],[minisat] is necessary.
 
-##############################
-You can input the sodoku by an input file:
-	1: Open the current directory in terminal.
-	2: ./run.sh [filename]
-		e.g. ./run.sh sodoku.in
+A script use minisat to solve sudokus.
 
-You need to prepare the input file in advance.
-	An example for input file:
+Step 1:
+	install minisat first:
+		sudo apt-get install minisat
+
+Step 2:
+	You can input the sudoku by an input file:
+		1: Open the current directory in terminal.
+		2: ./run.sh [filename]
+			e.g. ./run.sh sudoku.in
+
+	You need to prepare the input file in advance.
+		An example for input file:
 	
-		000000047
-		003001800
-		058000090
-		000029300
-		009003018
-		004000050
-		000095004
-		000600000
-		300000701
+			000000047
+			003001800
+			058000090
+			000029300
+			009003018
+			004000050
+			000095004
+			000600000
+			300000701
 
-0 means you need to fill the grid.
-1-9 means the number in the grid is given.
-##############################
-You can also run it directly and input the sodoku in the terminal:
-	1: Open the current directory in terminal.
-	2: ./run.sh
-##############################
+	0 means you need to fill the grid.
+	1-9 means the number in the grid is given.
+--------------------------------------------------
+	You can also run it directly and input the sudoku in the terminal:
+		1: Open the current directory in terminal.
+		2: ./run.sh
+

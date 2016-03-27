@@ -5,7 +5,7 @@ using namespace std;
 
 string str;
 int temp;
-int sodoku[10][10];
+int sudoku[10][10];
 
 inline void read()
 {
@@ -20,7 +20,7 @@ inline void read()
 			int row=temp/81+1;
 			int column=(temp%81)/9+1;
 			int number=temp%9+1;
-			sodoku[row][column]=number;
+			sudoku[row][column]=number;
 		}
 		
 		cin>>temp;
@@ -33,7 +33,7 @@ inline void print()
 	{
 		for(int column=1;column<=9;column++)
 		{
-			cout<<sodoku[row][column];
+			cout<<sudoku[row][column];
 
 			if(column<9&&column%3==0)
 				cout<<'|';
