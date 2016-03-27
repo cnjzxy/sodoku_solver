@@ -16,26 +16,6 @@ inline int get_idx(int row,int column,int num)
 
 inline void initial()
 {
-	//for each grid
-	for(int i=1;i<=9;i++)
-		for(int j=1;j<=9;j++)
-		{
-			for(int k1=1;k1<9;k1++)
-				for(int k2=k1+1;k2<=9;k2++)
-				{
-					clauses++;
-					clause[clauses].push_back(-get_idx(i,j,k1));
-					clause[clauses].push_back(-get_idx(i,j,k2));
-					clause[clauses].push_back(0);
-				}
-			
-			clauses++;
-			for(int k=1;k<=9;k++)
-				clause[clauses].push_back(get_idx(i,j,k));
-			clause[clauses].push_back(0);
-		}
-	//for each grid
-	
 	//for each row
 	for(int i=1;i<=9;i++)
 		for(int k=1;k<=9;k++)
@@ -89,11 +69,29 @@ inline void read()
 	{
 		string str;
 		cin>>str;
-		for(int j=0;j<9;j++)
-			if(str[j]!='0')
+		for(int j=1;j<=9;j++)
+			if(str[j-1]!='0')
 			{
+				//the grid is sure
 				clauses++;
-				clause[clauses].push_back(get_idx(i,j+1,str[j]-'0'));
+				clause[clauses].push_back(get_idx(i,j,str[j-1]-'0'));
+				clause[clauses].push_back(0);
+			}
+			else
+			{
+				//not sure
+				for(int k1=1;k1<9;k1++)
+					for(int k2=k1+1;k2<=9;k2++)
+					{
+						clauses++;
+						clause[clauses].push_back(-get_idx(i,j,k1));
+						clause[clauses].push_back(-get_idx(i,j,k2));
+						clause[clauses].push_back(0);
+					}
+			
+				clauses++;
+				for(int k=1;k<=9;k++)
+					clause[clauses].push_back(get_idx(i,j,k));
 				clause[clauses].push_back(0);
 			}
 	}
