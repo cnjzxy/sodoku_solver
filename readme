@@ -2,7 +2,7 @@
 A script use minisat to solve sudokus.
 
 Step 1:
-	install minisat first:
+	Install minisat first:
 		sudo apt-get install minisat
 
 Step 2:
