@@ -1,0 +1,26 @@
+gcc, minisat is needed.
+for linux only.
+
+##############################
+Step 1:
+
+Copy the sodoku into sodoku.in.
+
+An example for sodoku.in:
+000000047
+003001800
+058000090
+000029300
+009003018
+004000050
+000095004
+000600000
+300000701
+
+0 means you need to fill the grid.
+1-9 means the number in the grid is given.
+##############################
+Step 2:
+
+	./run.sh
+##############################
