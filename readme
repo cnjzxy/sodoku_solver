@@ -1,25 +1,28 @@
-gcc, minisat is needed.
+[gcc],[minisat] is necessary.
 
 ##############################
-Step 1:
+You can input the sodoku by an input file:
+	1: Open the current directory in terminal.
+	2: ./run.sh [filename]
+		e.g. ./run.sh sodoku.in
 
-Copy the sodoku into sodoku.in.
-
-An example for sodoku.in:
-000000047
-003001800
-058000090
-000029300
-009003018
-004000050
-000095004
-000600000
-300000701
+You need to prepare the input file in advance.
+	An example for input file:
+	
+		000000047
+		003001800
+		058000090
+		000029300
+		009003018
+		004000050
+		000095004
+		000600000
+		300000701
 
 0 means you need to fill the grid.
 1-9 means the number in the grid is given.
 ##############################
-Step 2:
-
-	./run.sh
+You can also run it directly and input the sodoku in the terminal:
+	1: Open the current directory in terminal.
+	2: ./run.sh
 ##############################
