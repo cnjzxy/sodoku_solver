@@ -73,9 +73,16 @@ inline void read()
 			if(str[j-1]!='0')
 			{
 				//the grid is sure
-				clauses++;
-				clause[clauses].push_back(get_idx(i,j,str[j-1]-'0'));
-				clause[clauses].push_back(0);
+				for(int k=1;k<=9;k++)
+				{
+					clauses++;
+					if(str[j-1]-'0'==k)
+						clause[clauses].push_back(get_idx(i,j,k));
+					else
+						clause[clauses].push_back(-get_idx(i,j,k));
+					clause[clauses].push_back(0);
+				}
+				//the grid is sure
 			}
 			else
 			{
@@ -93,6 +100,7 @@ inline void read()
 				for(int k=1;k<=9;k++)
 					clause[clauses].push_back(get_idx(i,j,k));
 				clause[clauses].push_back(0);
+				//not sure
 			}
 	}
 }
